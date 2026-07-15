@@ -25,7 +25,6 @@ def reset_game():
     st.session_state.score = 0
     st.session_state.answered = False
     st.session_state.game_over = False
-    st.session_state.user_answer = ""
 
 
 if "questions" not in st.session_state:
@@ -53,7 +52,8 @@ current_question = st.session_state.questions[st.session_state.current_index]
 st.subheader("문제")
 st.write(f"뜻: {current_question['meaning']}")
 
-answer = st.text_input("영어 단어를 입력하세요", key="user_answer")
+input_key = f"answer_{st.session_state.current_index}"
+answer = st.text_input("영어 단어를 입력하세요", key=input_key)
 
 if st.button("정답 확인"):
     if not answer.strip():
@@ -71,7 +71,6 @@ if st.session_state.answered:
         if st.session_state.current_index < len(st.session_state.questions) - 1:
             st.session_state.current_index += 1
             st.session_state.answered = False
-            st.session_state.user_answer = ""
         else:
             st.session_state.game_over = True
 
