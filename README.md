@@ -1,25 +1,23 @@
-# 🎈 Blank app template
+# 📚 중학생 영단어 게임
 
-A simple Streamlit app template for you to modify!
+이 프로젝트는 중학생 수준의 영어 단어를 맞히는 간단한 Streamlit 게임입니다.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+### 실행 방법
 
-### How to run it on your own machine
-
-Prerequisite: install `uv` if you don't already have it.
-
-```
-$ curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-1. Sync the dependencies
+1. 의존성 설치
 
    ```
    $ uv sync
    ```
 
-2. Run the app
+2. 앱 실행
 
    ```
    $ uv run streamlit run streamlit_app.py
    ```
+
+### 게임 방식
+
+- 뜻을 보고 영어 단어를 입력합니다.
+- 정답을 맞히면 점수가 올라갑니다.
+- 10문제를 모두 풀면 결과를 확인할 수 있습니다.
